@@ -18,7 +18,8 @@ import {
   ListIcon,
   OrderedList,
   UnorderedList,
-  Divider
+  Divider,
+  Image
 } from "@chakra-ui/react";
 import { Background } from "./components/Background";
 import Iframe from "react-iframe";
@@ -123,20 +124,37 @@ function App() {
                 </Box>
               </Box>
               <Spacer />
-              <Box w="40%" p="4" bg="black">
-                <AspectRatio ratio={16 / 9} p={10}>
+              <Box w="40%"p={5} bg="black">
+                <AspectRatio m={2} ratio={16 / 9} p={10}>
                   <Iframe
                     url="https://www.youtube.com/embed/cjIv7ut14Wk"
                     className="myClassname"
                     display="initial"
                   />
                 </AspectRatio>
-                <AspectRatio ratio={16 / 9}>
-                  <Iframe
-                    url="http://www.youtube.com/embed/xDMP3i36naA"
-                    className="myClassname"
-                    display="initial"
-                  />
+                <AspectRatio m={5}  ratio={16 / 9} >
+                <Image
+                  src='../images/character_select.png'
+                  alt='character selection screen'
+                />
+                </AspectRatio>
+                <AspectRatio m={5}  ratio={16 / 9} >
+                <Image
+                  src='../images/dorm.png'
+                  alt='dorm'
+                />
+                </AspectRatio>
+                <AspectRatio m={5}  ratio={16 / 9} >
+                <Image
+                  src='../images/shade.png'
+                  alt='dorm'
+                />
+                </AspectRatio>
+                <AspectRatio m={5}  ratio={16 / 9} >
+                <Image
+                  src='../images/ratio.png'
+                  alt='dorm'
+                />
                 </AspectRatio>
               </Box>
             </Flex>
