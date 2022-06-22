@@ -24,7 +24,7 @@ import {
 import { Background } from "./components/Background";
 import Iframe from "react-iframe";
 import { useEffect, useState } from "react";
-import { Desktop, DeviceMobile, MagicWand, Book } from "phosphor-react";
+import { Desktop, DeviceMobile, MagicWand, Book, Storefront, Equalizer, PaintBrush, Pen } from "phosphor-react";
 
 function App() {
   const gameURL =
@@ -118,10 +118,11 @@ function App() {
                     <Link color='violet' href='https://ima.shanghai.nyu.edu/node/5' isExternal> NYU Emerging Media students </Link> who wanted to to work together on a game that pushed the limits of what a game on the web could be. 
                   </Text>
                     <List  mt={5} spacing={3}>
-                    <ListItem><ListIcon as={MagicWand} color='#FD6FFF' />Art: Andrew Liu, Hatim Behnsain, Soojin Lee</ListItem>
-                    <ListItem><ListIcon as={MagicWand} color='#FD6FFF' />Story, Programming: Christian Grewell, Zane Fadul</ListItem>
-                    <ListItem><ListIcon as={MagicWand} color='#FD6FFF' />Design: Soojin Lee</ListItem>
-                    <ListItem><ListIcon as={MagicWand} color='#FD6FFF' />Music: Zane Fadul</ListItem>
+                    <ListItem><ListIcon as={PaintBrush} color='white' />Art: Andrew Liu, Hatim Behnsain, Soojin Lee</ListItem>
+                    <ListItem><ListIcon as={Book} color='white' />Story, Programming: Christian Grewell, Zane Fadul</ListItem>
+                    <ListItem><ListIcon as={Pen} color='white' />Design: Soojin Lee</ListItem>
+                    <ListItem><ListIcon as={Equalizer} color='white' />Music: Zane Fadul</ListItem>
+                    <ListItem><ListIcon as={Storefront} color='white' />Marketing: Amy Kang</ListItem>
                   </List>
                 </Box>
               </Box>
