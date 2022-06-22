@@ -63,7 +63,7 @@ function App() {
             </Text>
           </Box>
           <Center w='100%'>
-          <AspectRatio w="100%" ratio={633 / 292} m={10}>
+          <AspectRatio w="100%" ratio={633 / 292} m={5}>
             <Iframe
               url={play}
               width="100%"
@@ -80,8 +80,8 @@ function App() {
                 <Stack direction="row" m={5} spacing={2}>
                   <Button
                     leftIcon={<Desktop />}
-                    w="200px"
-                    size={['sm', 'md', 'lg', 'xl']}
+                    w={['100', '200', '300px']}
+                    size={['sm', 'md', 'lg']}
                     colorScheme="yellow"
                     onClick={playGame}
                   >
@@ -90,8 +90,8 @@ function App() {
                   <Link href={gameURL} isExternal>
                     <Button
                       leftIcon={<DeviceMobile />}
-                      w="200px"
-                      size={['sm', 'md', 'lg', 'xl']}
+                      w={['150', '200', '300px']}
+                      size={['sm', 'md', 'lg']}
                       colorScheme="blue"
                     >
                       PLAY (MOBILE)
