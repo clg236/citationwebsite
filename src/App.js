@@ -28,7 +28,7 @@ import { Desktop, DeviceMobile, MagicWand, Book } from "phosphor-react";
 
 function App() {
   const gameURL =
-    "https://d22tf61e2z9ch3.cloudfront.net/";
+    "https://d13hzxyuktsiiu.cloudfront.net";
   const [play, setPlay] = useState("");
 
   const playGame = () => {
