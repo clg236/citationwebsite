@@ -28,7 +28,7 @@ import { Desktop, DeviceMobile, MagicWand, Book } from "phosphor-react";
 
 function App() {
   const gameURL =
-    "http://hallpass-citation.s3-website.us-east-2.amazonaws.com/";
+    "https://hallpass-citation.s3-website.us-east-2.amazonaws.com/";
   const [play, setPlay] = useState("");
 
   const playGame = () => {
