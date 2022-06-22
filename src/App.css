@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+body {
+  background-color: black;
+}
+.background {      
+      /* Set up positioning */
+      position: fixed;
+      top: 0;
+      left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-tentacles {
+  transform: scale(1.4,1.4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-eyes {
+  transform: scale(1.1,1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game {
+  background-image: url(./img/citation_cover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid aliceblue;
+  border-radius: 10px;
 }
