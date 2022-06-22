@@ -103,7 +103,7 @@ function App() {
             <Flex mt={20}>
               <Box w="60%" bg="black" p={5} >
                 <Box color='white' fontSize={{ base: '24px', md: '40px', lg: '32px' }} mb={10}  >
-                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize={{ base: '24px', md: '40px', lg: '32px' }} p={2}>ABOUT</Text>
+                  <Text fontSize={{ base: '24px', md: '40px', lg: '52px' }} p={2}>ABOUT</Text>
                   <Text mt={5} fontSize={{ base: '24px', md: '40px', lg: '32px' }}>Welcome to the world of <i>Dream School</i>, one of the world's premiere school of magic, where tests are games and games are tests. You play as a fledgling scholar on the eve of a <i>SUPER IMPORTANT</i> test.</Text>
                   <Text mt={5}>Unfortunately, you can't seem to find your notes. Without them, you'll surely fail...</Text>  
                   <Text mt={5} color='yellow'><b>人民请注意!</b> The first episode requires that you've read the Bean King v. Dream School Case. You can do so in-game, or on our website.</Text>
@@ -112,7 +112,7 @@ function App() {
                   </Link>   
                 </Box>
                 <Box color='white' fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
-                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize={{ base: '24px', md: '40px', lg: '32px' }} p={2}>CREDITS</Text>
+                  <Text fontSize={{ base: '24px', md: '40px', lg: '52px' }} p={2}>CREDITS</Text>
                   <Text mt={5} fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
                   <i>Citation</i> was made over a summer by a small group of  
                     <Link color='violet' href='https://ima.shanghai.nyu.edu/node/5' isExternal> NYU Emerging Media students </Link> who wanted to to work together on a game that pushed the limits of what a game on the web could be. 
