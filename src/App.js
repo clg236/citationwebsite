@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <Box>
+    <Box >
       <Box className="background">
         <Background />
       </Box>
@@ -45,24 +45,25 @@ function App() {
         <VStack
           spacing={0}
           style={{ zIndex: "999" }}
-          bg="blackAlpha.800"
+          bg="black"
           padding={10}
         >
-          <Box maxW="32rem" textStyle="h1" color="white">
+          <Text align='center' textStyle="h1" color="white">
             Citation
-          </Box>
-          <Box>
-            <Heading align="center" mb={5} color="yellow.100" as="h1">
+          </Text>
+          <Box p={10}>
+            <Text align="center" mb={5} color="yellow.100" as="h1" fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
               a tiny game about academic integrity
-            </Heading>
-            <Text align="center" fontSize="2xl" mb={10} color="white">
+            </Text>
+            <Text align="center" mb={10} color="white" fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
               Citation is an episodic mobile and desktop web game. You play as a
               fledgling, if not forgetful scholar of magic on a hunt for your
               lost notes. In the process, you’ll absorb some common-sense
               knowledge about what it means to be an ethical scholar.
             </Text>
           </Box>
-          <AspectRatio w="100%" ratio={633 / 292} p={10}>
+          <Center w='100%'>
+          <AspectRatio w="100%" ratio={633 / 292} m={10}>
             <Iframe
               url={play}
               width="100%"
@@ -72,14 +73,15 @@ function App() {
               allowFullScreen
             />
           </AspectRatio>
-          <Box w="100%" bg="black">
-            <Center>
-              <VStack>
-                <Stack direction="row" m={5} spacing={4}>
+          </Center>
+          <Box w="100%" bg="black" p={2} >
+            <Center >
+              <VStack >
+                <Stack direction="row" m={5} spacing={2}>
                   <Button
                     leftIcon={<Desktop />}
                     w="200px"
-                    size="lg"
+                    size={['sm', 'md', 'lg', 'xl']}
                     colorScheme="yellow"
                     onClick={playGame}
                   >
@@ -89,7 +91,7 @@ function App() {
                     <Button
                       leftIcon={<DeviceMobile />}
                       w="200px"
-                      size="lg"
+                      size={['sm', 'md', 'lg', 'xl']}
                       colorScheme="blue"
                     >
                       PLAY (MOBILE)
@@ -100,18 +102,18 @@ function App() {
             </Center>
             <Flex mt={20}>
               <Box w="60%" bg="black" p={5} >
-                <Box color='white' fontSize="2xl" mb={10}  >
-                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize='6xl' p={2}>ABOUT</Text>
-                  <Text mt={5} fontSize="2xl">Welcome to the world of <i>Dream School</i>, one of the world's premiere school of magic, where tests are games and games are tests. You play as a fledgling scholar on the eve of a <i>SUPER IMPORTANT</i> test.</Text>
+                <Box color='white' fontSize={{ base: '24px', md: '40px', lg: '32px' }} mb={10}  >
+                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize={{ base: '24px', md: '40px', lg: '32px' }} p={2}>ABOUT</Text>
+                  <Text mt={5} fontSize={{ base: '24px', md: '40px', lg: '32px' }}>Welcome to the world of <i>Dream School</i>, one of the world's premiere school of magic, where tests are games and games are tests. You play as a fledgling scholar on the eve of a <i>SUPER IMPORTANT</i> test.</Text>
                   <Text mt={5}>Unfortunately, you can't seem to find your notes. Without them, you'll surely fail...</Text>  
                   <Text mt={5} color='yellow'><b>人民请注意!</b> The first episode requires that you've read the Bean King v. Dream School Case. You can do so in-game, or on our website.</Text>
                   <Link href='https://www.hallpass.games/2021/10/18/bean-king-v-dream-school-case-description/' isExternal>
-                    <Button leftIcon={<Book />} mt={5} variant='outline' p={10} colorScheme="pink">Read the case</Button>
+                    <Button leftIcon={<Book />} size={['sm', 'md', 'lg', 'xl']} mt={5} variant='outline' p={10} colorScheme="pink">Read the case</Button>
                   </Link>   
                 </Box>
-                <Box color='white' fontSize="2xl">
-                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize='6xl' p={2}>CREDITS</Text>
-                  <Text mt={5} fontSize="2xl">
+                <Box color='white' fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
+                  <Text bgGradient='linear(to-l, white, #7928CA)' fontSize={{ base: '24px', md: '40px', lg: '32px' }} p={2}>CREDITS</Text>
+                  <Text mt={5} fontSize={{ base: '24px', md: '40px', lg: '32px' }}>
                   <i>Citation</i> was made over a summer by a small group of  
                     <Link color='violet' href='https://ima.shanghai.nyu.edu/node/5' isExternal> NYU Emerging Media students </Link> who wanted to to work together on a game that pushed the limits of what a game on the web could be. 
                   </Text>

@@ -1,6 +1,7 @@
-body {
+body,html {
   background-color: black;
 }
+
 .background {      
       /* Set up positioning */
       position: fixed;
