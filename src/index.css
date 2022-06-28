@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "HungryPro";
+  src: local("HungryPro"),
+   url("./fonts/HungryPro.ttf") format("truetype");
+  font-weight: bold;
+  }
+  
