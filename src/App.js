@@ -31,10 +31,10 @@ function App() {
   const gameURL =
     "https://d13hzxyuktsiiu.cloudfront.net";
   const [play, setPlay] = useState("");
-  const [playPressed, setPlayPressed] = useState("visible")
+  const [playPressed, setPlayPressed] = useState(false)
   const playGame = () => {
     console.log("playing the game");
-    setPlayPressed("hidden");
+    setPlayPressed(true);
     setPlay(gameURL);
   };
 
@@ -83,7 +83,7 @@ function App() {
                   allowFullScreen
                 />
               </AspectRatio>
-            
+            {!playPressed ? 
               <BrowserView style={{width:"15%", height:"100%" , position:"absolute"}}>
                 <AspectRatio 
                   w="100%" 
@@ -91,7 +91,6 @@ function App() {
                   ratio={200 / 55} 
                   position="absolute" 
                   cursor={'pointer'}
-                  visibility={playPressed}
                   onClick={playGame}
                   >
                   <Image 
@@ -100,10 +99,14 @@ function App() {
                     />
                 </AspectRatio>
               </BrowserView>
+              : null}
+              {!playPressed ? 
               <MobileView style={{width:"15%", bottom:"25%" , position:"absolute"}}>
                 <Link href={gameURL} isExternal>
                   <AspectRatio 
-                    ratio={200 / 55} 
+                    ratio={200 / 55}
+                    cursor={'pointer'}
+                    onClick={playGame}
                     >
                     <Image 
                       src='../images/play_button.png'
@@ -112,6 +115,7 @@ function App() {
                   </AspectRatio>
                 </Link>
               </MobileView>
+            : null}
               
               
           </Center>
