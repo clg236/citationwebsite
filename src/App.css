@@ -1,20 +1,26 @@
-body,html {
+body,
+html {
   background-color: black;
 }
 
-.background {      
-      /* Set up positioning */
-      position: fixed;
-      top: 0;
-      left: 0;
+.background {
+  /* Set up positioning */
+  transform: scale(1.1, 1.1) translateY(1em);
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .background-tentacles {
-  transform: scale(1.4,1.4);
+  transform: translateY(-1em);
 }
 
 .background-eyes {
-  transform: scale(1.1,1.1);
+  transform: scale(1.025, 1.025);
+}
+
+.background-image {
+  transform: scale(1.025, 1.025);
 }
 
 .game {
@@ -26,4 +32,4 @@ body,html {
 }
 .font-face-gm {
   font-family: "HungryPro";
- }
+}
