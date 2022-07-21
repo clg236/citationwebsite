@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { FaChevronDown, FaChevronCircleUp } from "react-icons/fa";
+import { Link as ScrollLink, Element } from "react-scroll";
 import {
   AspectRatio,
   Box,
@@ -52,6 +54,22 @@ function App() {
     setPlay(gameURL);
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  console.log(scrollPosition);
+
   return (
     <Box
       style={{
@@ -62,22 +80,51 @@ function App() {
       <a href="https://hallpass.games" id="hallpass-logo">
         <Image src="../images/hallpass_logo.png" alt="hallpass-logo" />
       </a>
+      <Center>
+        <ScrollLink
+          to="citation"
+          spy={true}
+          smooth={true}
+          offset={-125}
+          duration={300}
+          id="scroll-down"
+        >
+          <FaChevronDown fontSize={"2.3em"} />
+        </ScrollLink>
+      </Center>
 
-      <Box className="background">
-        <Background />
-      </Box>
+      <Element name="/">
+        <Box className="background">
+          <Background />
+        </Box>
+      </Element>
+
       <Center mt={600} style={{ margin: "0" }}>
         <VStack
           spacing={0}
-          style={{ zIndex: "999", margin: "0", transform: "translateY(4em)" }}
+          style={{ zIndex: "500", margin: "0", transform: "translateY(4em)" }}
           bg="black"
           padding={10}
         >
           {/* <Text align='center' textStyle="h1" color="white">
             Citation
           </Text> */}
+          <Element name="citation">
+            <Image src="../images/citation-logo.png" alt="citation-logo" />
+          </Element>
+          {scrollPosition >= 0 && (
+            <ScrollLink
+              to="/"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={300}
+              id="scroll-up"
+            >
+              <FaChevronCircleUp fontSize={"2.3em"} />
+            </ScrollLink>
+          )}
 
-          <Image src="../images/citation-logo.png" alt="citation-logo" />
           <Box p={10}>
             <Text
               align="center"
