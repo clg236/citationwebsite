@@ -53,11 +53,20 @@ function App() {
   };
 
   return (
-    <Box style={{ backgroundColor: "black" }}>
+    <Box
+      style={{
+        backgroundColor: "black",
+        cursor: "url(../images/arrow_cursor.png),auto",
+      }}
+    >
+      <a href="https://hallpass.games" id="hallpass-logo">
+        <Image src="../images/hallpass_logo.png" alt="hallpass-logo" />
+      </a>
+
       <Box className="background">
         <Background />
       </Box>
-      <Center mt={600}>
+      <Center mt={600} style={{ margin: "0" }}>
         <VStack
           spacing={0}
           style={{ zIndex: "999", margin: "0", transform: "translateY(4em)" }}
