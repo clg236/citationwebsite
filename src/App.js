@@ -53,23 +53,6 @@ function App() {
     setPlayPressed(true);
     setPlay(gameURL);
   };
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  console.log(scrollPosition);
-
   return (
     <Box
       style={{
@@ -112,18 +95,17 @@ function App() {
           <Element name="citation">
             <Image src="../images/citation-logo.png" alt="citation-logo" />
           </Element>
-          {scrollPosition >= 0 && (
-            <ScrollLink
-              to="/"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={300}
-              id="scroll-up"
-            >
-              <FaChevronCircleUp fontSize={"2.3em"} />
-            </ScrollLink>
-          )}
+
+          <ScrollLink
+            to="/"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={300}
+            id="scroll-up"
+          >
+            <FaChevronCircleUp fontSize={"2.3em"} />
+          </ScrollLink>
 
           <Box p={10}>
             <Text
