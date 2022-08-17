@@ -17,24 +17,33 @@ export const Background = () => {
   }, []);
 
   return (
-    <div ref={sceneEl} data-limit-x="10" data-limit-y="28" >
+    <div ref={sceneEl} data-limit-x="65" data-limit-y="15">
       <div ref={sceneEl} data-depth="0">
-        <img
-          src="../images/citation1.png"
-          alt="shadow background"
-        />
+        <img src="../images/citation1.png" alt="shadow background" />
       </div>
       <div ref={sceneEl} data-depth="0.6">
-        <img src="../images/citation2.png" alt="tentacles" className="background-tentacles"/>
+        <img
+          src="../images/citation2.png"
+          alt="tentacles"
+          className="background-tentacles"
+        />
       </div>
       <div ref={sceneEl} data-depth="1.0">
         <img src="../images/citation-sparks2.png" alt="sparks" />
       </div>
       <div ref={sceneEl} data-depth="1.5">
-        <img src="../images/citation3-base.png" alt="eyeball base" className="background-eyes"/>
+        <img
+          src="../images/citation3-base.png"
+          alt="eyeball base"
+          className="background-eyes"
+        />
       </div>
       <div ref={sceneEl} data-depth="1.65">
-        <img src="../images/citation3-pupil.png" alt="eyeball pupils" className="background-image"/>
+        <img
+          src="../images/citation3-pupil.png"
+          alt="eyeball pupils"
+          className="background-image"
+        />
       </div>
       <div ref={sceneEl} data-depth="1">
         <img src="../images/citation4.png" alt="characters" />

@@ -1,20 +1,68 @@
-body,html {
+body,
+html {
   background-color: black;
 }
 
-.background {      
-      /* Set up positioning */
-      position: fixed;
-      top: 0;
-      left: 0;
+#hallpass-logo {
+  position: fixed;
+  left: 3em;
+  top: 2em;
+  z-index: 10;
+}
+
+#scroll-up {
+  z-index: 999;
+  position: fixed;
+  z-index: 10;
+  bottom: 3em;
+  right: 3em;
+  color: orange;
+}
+
+#scroll-up:hover {
+  animation: scroll-down-hover 0.05s linear forwards;
+}
+
+#scroll-down {
+  position: fixed;
+  z-index: 10;
+  bottom: 2em;
+  color: orange;
+}
+
+#scroll-down:hover {
+  animation: scroll-down-hover 0.05s linear forwards;
+}
+
+@keyframes scroll-down-hover {
+  0% {
+    transform: scale(1.8, 1.8);
+    color: orange;
+  }
+  100% {
+    transform: scale(1.5, 1.5);
+    color: rgb(255, 239, 208);
+  }
+}
+
+.background {
+  /* Set up positioning */
+  transform: scale(1.1, 1.1) translateY(1em);
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .background-tentacles {
-  transform: scale(1.4,1.4);
+  transform: translateY(-1em);
 }
 
 .background-eyes {
-  transform: scale(1.1,1.1);
+  transform: scale(1.025, 1.025);
+}
+
+.background-image {
+  transform: scale(1.025, 1.025);
 }
 
 .game {
@@ -26,4 +74,4 @@ body,html {
 }
 .font-face-gm {
   font-family: "HungryPro";
- }
+}
